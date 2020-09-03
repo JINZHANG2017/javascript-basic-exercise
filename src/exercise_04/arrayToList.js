@@ -14,14 +14,18 @@ export default function arrayToList(array) {
   }
   let head={};
   let cur=null;
+  let pre=null;
   for(let i=0;i<array.length;i++){
     if(i==0){
       head.value=array[0];
       head.next=cur;
+      pre=head;
     }else{
       cur={};
       cur.value=array[i];
       cur.next=null;
+      pre.next=cur;
+      pre=cur;
       cur=cur.next;
     }
   }
