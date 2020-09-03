@@ -15,6 +15,5 @@ export default function formatNumber(number, option) {
     // eslint-disable-next-line no-const-assign
     re =`$ ${re}`;
   }
-  //throw new Error('Please delete this line and implement the function');
   return re;
 }
